@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <fieldset>
+            <legend><h1>Add a question</h1></legend>
+            <label for="question_text">Question</label>
+            <input type="text" name="question_text"><br><br>
+
+            <label for="pub_date">Pub_date</label>
+            <input type="date" name="pub_date" value="date oo">
+
+            <input type="submit" name="" id="">
+        </fieldset>
+        
+
+    </form>
+    
+</body>
+</html>

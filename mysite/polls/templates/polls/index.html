@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cohative</title>
+        <link rel="stylesheet" href="./output.css" />
+      </head>
+      <body>
+        <nav
+          class="flex flex-row justify-center space-x-9 bg-black text-white p-2 fixed w-full"
+        >
+          <a href="#">X(Twitter)</a>
+          <a href="#">Instagram</a>
+          <a href="#">Behance</a>
+          <a href="#">Linkedin</a>
+        </nav>
+    
+        <div class="flex flex-row py-20" id="home">
+          <div class="w-1/4 flex justify-end items-center pr-20">
+            <div class="flex flex-col text-lg items-start">
+              <a href="#" class="font-bold">| Home</a>
+              <a href="#">Our Work</a>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+    
+          <div class="w-2/3 p-">
+            <h1 class="text-6xl p-4">
+              We harness the collective power of creativity and collaboration to
+              forge lasting connections between brands and their audiences.
+            </h1>
+          </div>
+          <div class=""></div>
+        </div>
+        <div class="pb-16">
+          <img src="./images/COHATIVE.png" alt="" class="w-full" />
+        </div>
+    
+        <div class="w-full h-96 bg-black mt-6"></div>
+    
+        <div class="flex flex-row p-16">
+          <div class="w-1/6"></div>
+          <div class="w-5/6 space-y-5">
+            <h2 class="font-bold text-4xl">Mission</h2>
+            <p class="text-2xl w-1/2">
+              At cohative (from the latin "cohaerere" meaning "to come together"),
+              we believe that powerful brands are built on a foundation of
+              collaboration ansd clear storytelling. we don't just create visuals;
+              we craft narratives that resonate. Our approach is refreshingly
+              collaborative - we work hand-in-hand with our clients to understand
+              their vision, values, and target audience. Through open <br />
+              communication and a shared creative journey, we translate ehose
+              insights into compelling brand identities that not only look beautiful
+              but also connect deeply with the hearts and minds of your customers.
+            </p>
+          </div>
+        </div>
+    
+        <div class="w-full h-96 bg-black"></div>
+    
+        <div class="flex flex-row p-16">
+          <div class="w-1/6"></div>
+          <div class="w-5/6 space-y-5">
+            <h2 class="font-bold text-4xl">Our Core Value</h2>
+            <p class="text-2xl w-1/2">
+              Cohesion: We believe in the strength of a unified vision. We work
+              collaboratively with our clients to ensure all elements of their brand
+              identity seamlessly come together.
+            </p>
+            <p class="text-2xl w-1/2">
+              Clarity: We strive for clear communication in everything we do. Our
+              designs are visually impactful and our narratives are easy to
+              understand.
+            </p>
+    
+            <p class="text-2xl w-1/2">
+              Creativity: We are passionate about pushing boundaries and exploring
+              new ideas. We bring a fresh perspective to every project.
+            </p>
+            <p class="text-2xl w-1/2">
+              Connection: We believe in the power of storytelling to build
+              meaningful connections between brands and their audiences.
+            </p>
+    
+            <p class="text-2xl w-1/2">
+              Collaboration: We value teamwork and believe the best results come
+              from working together with our clients and each other.
+            </p>
+          </div>
+        </div>
+
+        {% if latest_question_lis %}
+    <ul>
+    {% for question in latest_question_lis %}
+        <li><a href="/polls/{{ question.id }}/"> Question {{ question.id }}: {{ question.question_text }} </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+       
+          <button class=" fixed bottom-5 right-5 flex justify-end bg-red-600 rounded-full p-4 text-white opacity-60 text-xl"  id="top">
+           
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 "
+                
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
+                />
+              </svg>
+            
+          </button>
+    
+          <script>
+    
+            const  topBtn = document.getElementById('top')
+            topBtn.addEventListener('click', function() {
+              window.scrollTo({top: 0, behavior:"smooth"});
+            });
+          </script>
+       
+      </body>
+    </html>
+    
+</body>
+</html>
